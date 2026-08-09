@@ -1,0 +1,25 @@
+[package]
+name = "llama-tray"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+description = "A panel control for a local llama-server"
+license = "GPL-3.0-or-later"
+
+[[bin]]
+name = "llama-tray"
+path = "src/main.rs"
+
+[lib]
+name = "llama_tray"
+path = "src/lib.rs"
+
+# No GTK: this process never opens a window. glib supplies the main loop and
+# gio supplies the D-Bus connection, the socket client, and subprocess spawning,
+# so the tray icon, the systemd calls and the HTTP probe all run on one library
+# that is already installed. Installed glib is 2.88.
+[dependencies]
+glib = "0.22"
+gio = { version = "0.22", features = ["v2_80"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
