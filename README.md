@@ -40,6 +40,14 @@ state reads without opening anything.
 It runs as `llama-tray.service`, wanted by `graphical-session.target`, so it
 comes up at login and goes away with the session.
 
+## Getting the icon back
+
+`Quit` in the menu is a clean exit, which is exactly the case `Restart=on-failure`
+declines to act on — so the icon stays gone until something asks for it again.
+That something is the **Llama Tray** entry in the app grid: it restarts the unit
+and nothing else. Restart rather than start, because it also has to work when
+the process is wedged rather than absent.
+
 ## How it works
 
 Three sources, none of them polled in the background:

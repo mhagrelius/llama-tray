@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Llama Tray
+Comment=Put the llama-server control back in the panel
+Icon=us.hagreli.LlamaTray
+# restart, not start: this is the button for "the icon is gone, fix it", and
+# start is a no-op against a unit systemd still believes is running.
+Exec=systemctl --user restart llama-tray.service
+Terminal=false
+# Nothing here ever draws a window, so the shell would spin waiting for one.
+StartupNotify=false
+Categories=System;Monitor;
+Keywords=llama;server;model;gpu;tray;panel;

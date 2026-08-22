@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Launcher icon: the same accelerator die the panel draws, on a tile. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3584e4"/>
+    <stop offset="1" stop-color="#1a5fb4"/>
+  </linearGradient>
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="url(#tile)"/>
+  <g fill="#ffffff">
+    <!-- pins -->
+    <rect x="28" y="49" width="15" height="6" rx="3"/>
+    <rect x="28" y="73" width="15" height="6" rx="3"/>
+    <rect x="85" y="49" width="15" height="6" rx="3"/>
+    <rect x="85" y="73" width="15" height="6" rx="3"/>
+    <rect x="49" y="28" width="6" height="15" rx="3"/>
+    <rect x="73" y="28" width="6" height="15" rx="3"/>
+    <rect x="49" y="85" width="6" height="15" rx="3"/>
+    <rect x="73" y="85" width="6" height="15" rx="3"/>
+    <!-- die -->
+    <rect x="40" y="40" width="48" height="48" rx="9"/>
+  </g>
+</svg>
